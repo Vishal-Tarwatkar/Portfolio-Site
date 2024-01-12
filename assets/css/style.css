@@ -10,41 +10,32 @@
 body {
    width: 100%;
    height: 100%;
-   font-family: "Poppins", sans-serif;
-   background-color: #161513;
-   color: #c5c5c5;
 }
 
-/*========================= navigation bar =========================*/
-nav {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   color: white;
-   padding: 1vw 25vw;
-   background-color: #222222;
+/*========================= Loading page =========================*/
+/* .loadingSection {
+   position: relative;
+   width: 100%;
+   height: 100%;
+} */
+
+.mainPage {
+   width: 100%;
+   height: 100%;
+   background-color: rgb(22, 22, 22);
+   position: absolute;
 }
 
-.logo {
-   color: #c5c5c5;
-   font-size: 18px;
-   font-weight: 500;
+.emptyDiv1 {
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   background-color: rgb(20, 207, 147);
 }
 
-.nav-links {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   gap: 2vw;
-   font-size: 14px;
-}
-
-.nav-links a {
-   text-decoration: none;
-   color: #c5c5c5;
-}
-
-/*========================= Home page =========================*/
-.home {
-   text-align: center;
+.emptyDiv2 {
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   background-color: rgb(252, 250, 248);
 }
