@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
 
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
 }
 
 .html,
@@ -13,29 +14,71 @@ body {
 }
 
 /*========================= Loading page =========================*/
-/* .loadingSection {
-   position: relative;
+.main {
    width: 100%;
-   height: 100%;
-} */
-
-.mainPage {
-   width: 100%;
-   height: 100%;
-   background-color: rgb(22, 22, 22);
-   position: absolute;
 }
 
-.emptyDiv1 {
+.loader {
+   width: 100%;
+   height: 100vh;
+   background-color: rgb(22, 22, 22);
+   color: #fff;
+}
+
+.loader .topheading {
+   position: absolute;
+   top: 3%;
+   left: 50%;
+   transform: translate(-50%, 0);
+   text-transform: uppercase;
+}
+
+.loader h5 {
+   text-align: center;
+   font-size: 10px;
+   font-weight: 400;
+}
+
+.loader h1{
+   display: flex;
+   justify-content: center;
    width: 100%;
    position: absolute;
-   bottom: 0;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-weight: 500;
+   font-size: 3vw;
+}
+
+.reveal .parent{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   overflow-y: hidden;
+}
+
+.reveal .parent .child{
+   display: block;
+}
+
+.parent .child span{
+   display: inline-block;
+}
+
+.green {
+   position: absolute;
+   top: 100%;
+   width: 100%;
+   height: 0vh;
    background-color: rgb(20, 207, 147);
 }
 
-.emptyDiv2 {
+/* .emptyDiv2 {
    width: 100%;
    position: absolute;
    bottom: 0;
    background-color: rgb(252, 250, 248);
-}
+} */
+
+/*========================= loading text =========================*/
