@@ -1,9 +1,3 @@
-function valueSetters() {
-   gsap.set(".nav a", { y: "-100%", opacity: 0 });
-   gsap.set(".home span .child", { y: "100%" });
-   gsap.set(".home .row img", { opacity: 0 });
-}
-
 //text transform animation
 //this will help us in a way that we dont have to create html elements manually
 //it will automatically get added in those text which has "reveal" class
@@ -29,6 +23,12 @@ function revealToSpan() {
       elem.innerHTML = "";
       elem.appendChild(Parent);
    });
+}
+
+function valueSetters() {
+   gsap.set(".nav a", { y: "-100%", opacity: 0 });
+   gsap.set(".home span .child", { y: "100%" });
+   gsap.set(".home .row img", { opacity: 0 });
 }
 
 function loaderAnimation() {
@@ -80,14 +80,24 @@ function loaderAnimation() {
 function homepageAnimation() {
    let tl = gsap.timeline();
 
-   tl.do(".nav a", {
+   tl.to(".nav a", {
       y: 0,
       opacity: 1,
       stagger: 0.05,
       ease: Expo.easeInOut,
    });
+   tl.to(".home .parent .child", {
+      y: 0,
+      stagger: .1,
+      duration: 2,
+      ease: Expo.easeInOut,
+   });
+   tl.to(".home .row img", {
+      opacity:1,
+      ease:Expo.easeInOut,
+   });
 }
 
-// valueSetters();
 revealToSpan();
+valueSetters();
 loaderAnimation();
