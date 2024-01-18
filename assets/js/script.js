@@ -88,16 +88,42 @@ function homepageAnimation() {
    });
    tl.to(".home .parent .child", {
       y: 0,
-      stagger: .1,
+      stagger: 0.1,
       duration: 2,
       ease: Expo.easeInOut,
    });
    tl.to(".home .row img", {
-      opacity:1,
-      ease:Expo.easeInOut,
+      opacity: 1,
+      ease: Expo.easeInOut,
    });
 }
 
-revealToSpan();
-valueSetters();
-loaderAnimation();
+function locointialize() {
+   const scroll = new LocomotiveScroll({
+      el: document.querySelector(".main"),
+      smooth: true,
+   });
+}
+
+function cardhover(){
+   document.querySelectorAll(".cnt")
+   .forEach(function(cnt){
+      let showingImage;
+
+      cnt.addEventListener("mousemove", function(dets){
+         document.querySelector(".cursor").children[dets.target.dataset.index].style.opacity = 1;
+         showingImage = dets.target;
+         document.querySelector(".cursor").children[dets.target.dataset.index].style.transform = `translate(${dets,clientX}px, ${dets.clientY}px)`;
+      })
+
+      cnt.addEventListener("mouseleave", function(dets){
+         document.querySelector(".cursor").children[showingImage.target.dataset.index].style.opacity = 0;
+      })
+   })
+}
+
+// revealToSpan();
+// valueSetters();
+// loaderAnimation();
+locointialize();
+cardhover();
