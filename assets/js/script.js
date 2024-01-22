@@ -122,8 +122,8 @@ function cardhover(){
    })
 }
 
-// revealToSpan();
-// valueSetters();
-// loaderAnimation();
-locointialize();
-cardhover();
+revealToSpan();
+valueSetters();
+loaderAnimation();
+// locointialize();
+// cardhover();
