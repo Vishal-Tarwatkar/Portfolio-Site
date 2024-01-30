@@ -188,10 +188,26 @@ body {
    width: 30vw;
    transform: rotate(-30deg);
    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+   animation-name: hello;
+   animation-duration: 2s;
+   animation-delay: .5;
+   animation-iteration-count: infinite;
 }
 
 .right img:hover {
    filter: grayscale(1);
+}
+
+@keyframes hello {
+   0%{
+      transform: rotate(-30deg);
+   }
+   50%{
+      transform: rotate(0deg);
+   }
+   100%{
+      transform: rotate(-30deg);
+   }
 }
 
 /*========================= Work Area =========================*/
