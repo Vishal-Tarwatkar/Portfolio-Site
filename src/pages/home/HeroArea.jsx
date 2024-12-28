@@ -54,8 +54,11 @@ const HeroArea = () => {
          </div>
          <div className="flex justify-around font-Onest">
             {heroLinks.map((elem, index) => (
-               <button className="border border-black rounded-full px-2 text-xs">
-                  <a key={index} href={elem.linkUrl} className="">
+               <button
+                  key={index}
+                  className="border border-black rounded-full px-2 text-xs"
+               >
+                  <a href={elem.linkUrl} className="">
                      {elem.linkName}
                   </a>
                </button>

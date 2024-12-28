@@ -4,7 +4,7 @@ import HamburgerIcon from "./ui/HamburgerIcon";
 
 const Navbar = () => {
    return (
-      <div className="navbar flex justify-between items-center bg-[#fff0e3] px-3 py-1">
+      <div className="navbar flex justify-between items-center bg-[#fff0e3] p-3">
          <div>
             <img src={logo} alt="" className="w-8" />
          </div>
